@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import FindBillboards from "./pages/FindBillboards";
 import BillboardDetails from "./pages/BillboardDetails";
 import AddBillboard from "./pages/AddBillboard";
+import Analytics from "./pages/Analytics";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/find-billboards" element={<FindBillboards />} />
         <Route path="/billboard-details/:id" element={<BillboardDetails />} />
         <Route path="/add-billboard" element={<AddBillboard />} />
+        <Route path="/analytics" element={<Analytics />} />
       </Routes>
     </Router>
     </UserProvider>

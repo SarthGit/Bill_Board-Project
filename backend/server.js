@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./routes/auth");
 const billboardRoutes = require("./routes/Billboard"); 
+const powerbiRoutes = require("./routes/powerbi");
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/billboards", billboardRoutes); 
+app.use("/api/powerbi", powerbiRoutes);
 
 
 const mongoURI = process.env.MONGO_URI;

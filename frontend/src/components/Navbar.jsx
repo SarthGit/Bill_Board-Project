@@ -1,7 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../context/userContext";
 import { useNavigate, Link } from "react-router-dom";
-import { FaSearch, FaUser, FaSignOutAlt, FaUserCircle, FaBars, FaTimes } from "react-icons/fa";
+import { FaSearch, FaUser, FaSignOutAlt, FaUserCircle, FaBars, FaTimes, FaChartBar } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logout } = useContext(UserContext);
@@ -58,6 +58,9 @@ const Navbar = () => {
           </Link>
           <Link to="/add-billboard" className="font-medium text-gray-700 hover:text-gray-900 transition-colors">
             Add Billboard
+          </Link>
+          <Link to="/analytics" className="font-medium text-gray-700 hover:text-gray-900 transition-colors">
+            Analytics
           </Link>
           <Link to="/about" className="font-medium text-gray-700 hover:text-gray-900 transition-colors">
             About
@@ -196,6 +199,13 @@ const Navbar = () => {
               Add Billboard
             </Link>
             <Link
+              to="/analytics"
+              className="text-gray-500 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Analytics
+            </Link>
+            <Link
               to="/about"
               className="text-gray-500 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setMobileMenuOpen(false)}
@@ -241,6 +251,14 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Dashboard
+                </Link>
+                <Link
+                  to="/analytics"
+                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-200 rounded-md flex items-center"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <FaChartBar className="mr-2 text-gray-500" />
+                  Analytics Dashboard
                 </Link>
                 <button
                   onClick={() => {
