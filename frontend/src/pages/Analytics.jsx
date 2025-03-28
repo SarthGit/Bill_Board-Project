@@ -26,7 +26,7 @@ const Analytics = () => {
       description: "Key metrics and performance indicators",
       id: "dashboard-1",
       // Add the direct embed URL for the overview dashboard
-      directEmbedUrl: "https://app.powerbi.com/reportEmbed?reportId=08ea6154-a25e-4988-b032-0f498821241d&autoAuth=true&ctid=9ed1b325-e2c6-4a3f-a53f-076988981392"
+      directEmbedUrl: "https://app.powerbi.com/reportEmbed?reportId=737c2bd5-720f-4297-83f6-c1664eab0bd3&autoAuth=true&ctid=9ed1b325-e2c6-4a3f-a53f-076988981392"
     },
     geographical: {
       title: "Geographical Distribution",

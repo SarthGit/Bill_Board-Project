@@ -29,13 +29,15 @@ const Login = () => {
       const response = await axios.post("http://localhost:5000/api/auth/login", {
         email,
         password,
+      }, {
+        withCredentials: true
       });
 
       if (response.data.token) {
         // Pass the complete user data to login
         login(response.data.token, {
           name: response.data.name,
-          email: email, // Include email from the form
+          email: response.data.email || email, // Use email from response or form
           role: response.data.role || "user"
         });
         
